@@ -21,7 +21,7 @@ const App = () => {
     <div className="App" dir='rtl'>
       <Overlay />
        <a  href="https://order.plweb.online/wl/618613#!/rest/618613/menu"
-                            target="_blank" className='redirect'>לזמנות ומשלוחים</a>
+                            target="_blank" className='redirect'>להזמנות ומשלוחים</a>
       <Header />
       <section className="hero"></section>
       <About />
