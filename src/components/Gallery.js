@@ -8,9 +8,9 @@ const Gallery = () => {
 
 
     const mapDataToState = (data) => {
-        let couple = [] ;
-        for( let i = 0; i< data.length; i++){
-            couple = [...couple, {img1: data[i], img2: data[i+1]}];
+        let couple = [];
+        for (let i = 0; i < data.length; i++) {
+            couple = [...couple, { img1: data[i], img2: data[i + 1] }];
             ++i;
         }
         setImageCouple(couple);
@@ -26,11 +26,7 @@ const Gallery = () => {
 
     }, [])
 
-        console.log(imagesCouple)
-        console.log(imagesCouple)
-        console.log(imagesCouple)
-        console.log(imagesCouple)
-        console.log(imagesCouple)
+
 
     return (
         <>
@@ -50,24 +46,24 @@ const Gallery = () => {
                 <ol className="carousel-indicators">
                     {
                         imagesCouple.map((item, index) => (
-                             <li key={index} data-target="#myCarousel" data-slide-to={`${index}`} class={`${index==0? 'active' : ' '}`}></li>
+                            <li key={index} data-target="#myCarousel" data-slide-to={`${index}`} class={`${index == 0 ? 'active' : ' '}`}></li>
                         ))
                     }
-            
+
                 </ol>
 
                 <div className="carousel-inner desktop">
                     {
                         imagesCouple.map((item, index) => (
-                                   <div key={ index+5000} className={`item ${index==0 ? 'active':  ' '}`}>
-                                        <img src={item.img1.imageURL} alt={item.img1.imageURL} />
-                                        <img src={item.img2.imageURL} alt={item.img2.imageURL} />
+                            <div key={index + 5000} className={`item ${index == 0 ? 'active' : ' '}`}>
+                                <img src={item.img1.imageURL} alt={item.img1.imageURL} />
+                                <img src={item.img2.imageURL} alt={item.img2.imageURL} />
                             </div>
                         ))
                     }
-            
 
-                   
+
+
                 </div>
                 <a className="left carousel-control" href="#myCarousel" data-slide="prev">
                     <span className="glyphicon glyphicon-chevron-left"></span>
