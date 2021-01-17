@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Menu from './components/Menu';
 import About from './components/About';
@@ -14,9 +14,25 @@ import './styles/style.css';
 
 
 
-// error in iframe 269
 
 const App = () => {
+
+  function disableScroll() {
+    window.onscroll = function () {
+      window.scrollTo(0, 0);
+    };
+  }
+
+  useEffect(() => {
+    disableScroll();
+    window.addEventListener('load', function () {
+      window.onscroll = function () {
+      }
+
+    })
+  }, [])
+
+
   return (
     <div className="App" dir='rtl'>
       <Overlay />

@@ -95,7 +95,7 @@ const Menu = () => {
                         {
                             menuItems.specials.map(pizza => (
                                 <li>
-                                    <div classNameName='menu-item-name men-name'>{pizza.name}</div>
+                                    <div className='menu-item-name men-name'>{pizza.name}</div>
                                     <span className="menu-item-price">{pizza.price}</span>
                                     <p className="menu-item-description">{pizza.description}</p>
                                 </li>
